@@ -10,7 +10,7 @@ which might cause issues. From here, you are ready to build your base image.
 In order to use the systemd enabled base container created above, you will
 need to create your Dockerfile similar to the one below.
 
-     FROM local/c7-systemd
+     FROM local/docker-centos-systemd
      RUN yum -y install httpd; yum clean all; systemctl enable httpd.service
      EXPOSE 80
      CMD ["/usr/sbin/init"]
